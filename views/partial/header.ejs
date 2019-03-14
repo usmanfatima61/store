@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rabiamoda</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <link rel="stylesheet" href="../stylesheets/app.css">
+        <link rel="stylesheet" href="./stylesheets/app.css">
+      
+    </head>
+    <body>
+        <!--<div class="page-header"><h1>Rabiamoda logo</h1></div>-->
+        <header class="logo"> <a href="/"><h3>Rabiamoda logo</h3></a></header>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="dropdown"> <a href="/clothing">Clothing </a>
+          <ul class="dropdown-menu">
+            <li><a href="/">Abaya</a></li>
+            <li><a href="/clothing/dresses"> Dresses</a></li>
+            <li><a href="/">Shorts</a></li>
+          </ul>
+        </li>
+        <li class="dropdown"> <a href="/"  >Shoes </a>
+          <ul class="dropdown-menu">
+            <li><a href="/">Sandals</a></li>
+            <li><a href="/">Slippers</a></li>
+          </ul>
+        </li>
+         <li class="dropdown"> <a href="/"  >Bags </a>
+          <ul class="dropdown-menu">
+            <li><a href="/">Purse</a></li>
+            <li><a href="/">Crossing bag</a></li>
+          </ul>
+        </li>
+        <li class="dropdown"><a href="/"  >Materials</a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="/">Lace</a></li>
+            <li><a href="/">London Wax</a></li>
+            <li><a href="/">Super Wax</a></li>
+          </ul>
+        </li>
+      </ul>
+      
+        <ul class="nav navbar-nav navbar-right">
+            <li> <a href="/"> <span class="glyphicon glyphicon-search" aria-hidden="true"></span></a></li>
+            <li> <a href="/shopping_cart"> <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a></li>
+            <li class="dropdown">  <a href="/myaccount"> <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+            <ul class="dropdown-menu" role="menu">
+              <% if(!currentUser){ %>
+                     <li> <a href="/myaccount/signin"> <h4>Sign in</h4></a></li>
+                    <li> <a href="/myaccount/signup"> <h4>Sing Up</h4></a></li>
+                    <% } else { %>
+                     <li><a href="/myaccount"> Hello <%= currentUser.username %></a></li>
+                    <li> <a href="/myaccount/signout"> <h4>Sign out</h4></a></li>
+                   </a>
+                    <% } %>
+            </ul>
+            </li>
+       </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+	<!-- for navbar and dropdown menu -->
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
